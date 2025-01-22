@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .hidden { display: none; }
+    .error { color: red; }
+    .success { color: green; }
+  </style>
+</head>
+<body>
+  <!-- Login Form -->
+  <div id="loginForm">
+    <h3>Login to Lynkmi</h3>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button id="loginSubmit">Login</button>
+    <div id="loginError" class="error hidden"></div>
+  </div>
+
+  <!-- Bookmark Form -->
+  <div id="bookmarkForm" class="hidden">
+    <h3>Add Bookmark</h3>
+    <input type="text" id="title" placeholder="Title">
+    <input type="url" id="url" placeholder="URL">
+    <input type="text" id="tags" placeholder="Tags (comma separated)" autofocus>
+    <textarea id="description" placeholder="Description"></textarea>
+    <button id="bookmarkSubmit">Submit</button>
+    <div id="bookmarkError" class="error hidden"></div>
+    <div id="bookmarkSuccess" class="success hidden"></div>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>

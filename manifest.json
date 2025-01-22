@@ -1,0 +1,56 @@
+{
+  "name": "Lynkmi Bookmarker",
+  "description": "Quickly submit your current tab to Lynkmi",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "/images/lynkmi.png"
+    }
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "128": "/images/lynkmi.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "commands": {
+    "trigger-bookmark": {
+      "suggested_key": {
+        "mac": "Command+B",
+        "windows": "Ctrl+B",
+        "chromeos": "Ctrl+B",
+        "linux": "Ctrl+B"
+      },
+      "description": "Bookmark tab"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "form.html",
+        "form.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
