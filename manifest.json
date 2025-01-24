@@ -34,10 +34,10 @@
   "commands": {
     "trigger-bookmark": {
       "suggested_key": {
-        "mac": "Command+B",
-        "windows": "Ctrl+B",
-        "chromeos": "Ctrl+B",
-        "linux": "Ctrl+B"
+        "mac": "Command+Shift+B",
+        "windows": "Ctrl+Shift+B",
+        "chromeos": "Ctrl+Shift+B",
+        "linux": "Ctrl+Shift+B"
       },
       "description": "Bookmark tab"
     }
